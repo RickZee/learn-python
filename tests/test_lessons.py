@@ -11,7 +11,8 @@ import pathlib
 
 import nbformat
 import pytest
-from nbclient import NotebookClient
+
+from tests.notebook_runner import execute_notebook
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PATTERNS = (
@@ -37,13 +38,7 @@ def stdout(cell: nbformat.NotebookNode) -> str:
 def test_lesson_runs_and_outputs_are_fresh(path: pathlib.Path) -> None:
     saved = nbformat.read(path, as_version=4)
     fresh = nbformat.read(path, as_version=4)
-    NotebookClient(
-        fresh,
-        timeout=120,
-        kernel_name="python3",
-        record_timing=False,
-        resources={"metadata": {"path": str(path.parent)}},
-    ).execute()
+    execute_notebook(fresh, path)
     for old, new in zip(saved.cells, fresh.cells, strict=True):
         if new.cell_type != "code" or "volatile" in new.metadata.get("tags", []):
             continue

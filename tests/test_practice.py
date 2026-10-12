@@ -14,7 +14,8 @@ import pathlib
 
 import nbformat
 import pytest
-from nbclient import NotebookClient
+
+from tests.notebook_runner import execute_notebook
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PATTERNS = (
@@ -58,15 +59,7 @@ def splice(cell_source: str, solution: dict[str, str]) -> str:
 
 
 def first_error(nb: nbformat.NotebookNode, path: pathlib.Path) -> str | None:
-    client = NotebookClient(
-        nb,
-        timeout=120,
-        kernel_name="python3",
-        allow_errors=True,
-        record_timing=False,
-        resources={"metadata": {"path": str(path.parent)}},
-    )
-    client.execute()
+    execute_notebook(nb, path, allow_errors=True)
     for cell in nb.cells:
         for out in cell.get("outputs", []):
             if out.output_type == "error":
