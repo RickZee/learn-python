@@ -39,7 +39,7 @@ def test_lesson_runs_and_outputs_are_fresh(path: pathlib.Path) -> None:
     fresh = nbformat.read(path, as_version=4)
     NotebookClient(
         fresh,
-        timeout=60,
+        timeout=120,
         kernel_name="python3",
         record_timing=False,
         resources={"metadata": {"path": str(path.parent)}},

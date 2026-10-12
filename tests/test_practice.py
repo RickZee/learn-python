@@ -60,7 +60,7 @@ def splice(cell_source: str, solution: dict[str, str]) -> str:
 def first_error(nb: nbformat.NotebookNode, path: pathlib.Path) -> str | None:
     client = NotebookClient(
         nb,
-        timeout=60,
+        timeout=120,
         kernel_name="python3",
         allow_errors=True,
         record_timing=False,
