@@ -1,0 +1,22 @@
+{
+  "course/17-concurrency/01-threads-lesson.ipynb": {
+    "first": "# 01. Threads\n\n**Tier:** Deep. **Why you'd use this:** Several slow network waits should overlap instead of running one after another. Threads help with waiting; the GIL still serializes pure Python bytecode.\n\n**After this lesson you can:** overlap waits with threads; run work in a `ThreadPoolExecutor`; explain what the GIL serializes.\nAbout 30 minutes. **Uses:** [Context managers](../12-data-model/02-context-managers-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `with` guarantee about a context manager?\n2. Name one reason to prefer a pool over starting raw `Thread` objects by hand.\n\n<details><summary>Answers</summary>\n\n`__exit__` runs on the way out, even after an error. A pool caps workers and gives you futures for results.\n</details>\n"
+  },
+  "course/17-concurrency/02-processes-lesson.ipynb": {
+    "first": "# 02. Processes\n\n**Tier:** Deep. **Why you'd use this:** Heavy CPU work does not overlap well under the GIL. Separate processes can use more than one core, if the function and its data can be pickled.\n\n**After this lesson you can:** choose a process pool when CPU work should use more cores; map a picklable function across workers; explain why lambdas fail under spawn.\nAbout 25 minutes. **Uses:** [Threads](01-threads-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What kind of work do threads help most with?\n2. What does the GIL serialize?\n\n<details><summary>Answers</summary>\n\nWaiting (I/O). Pure Python bytecode on one object graph in a process.\n</details>\n"
+  },
+  "course/17-concurrency/03-async-lesson.ipynb": {
+    "first": "# 03. Async\n\n**Tier:** Deep. **Why you'd use this:** Many small waits can share one thread if each task yields at `await`. You gather results in order without a thread per wait.\n\n**After this lesson you can:** overlap `await` sleeps; gather results in order; start a loop from a script without calling `asyncio.run` inside a notebook.\nAbout 30 minutes. **Uses:** [Threads](01-threads-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. When do processes beat threads for speed?\n2. Why must a `ProcessPoolExecutor` target be picklable?\n\n<details><summary>Answers</summary>\n\nCPU-bound work that needs more than one core. Workers are separate interpreters that receive the function by pickling.\n</details>\n"
+  },
+  "course/17-concurrency/04-race-conditions-lesson.ipynb": {
+    "first": "# 04. Race conditions\n\n**Tier:** Deep. **Why you'd use this:** Two threads update the same counter with `+=` and you lose increments. A lock makes the read–modify–write step exclusive.\n\n**After this lesson you can:** explain a lost update from unlocked `+=`; make the race visible with read–sleep–write; protect the counter with a `Lock`.\nAbout 30 minutes. **Uses:** [Threads](01-threads-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `await` do to the current task?\n2. Why avoid `asyncio.run` inside a notebook cell that already has a loop?\n\n<details><summary>Answers</summary>\n\nIt pauses that task so others can run until the wait finishes. The notebook already has a running loop — nest or use top-level await instead.\n</details>\n"
+  },
+  "course/17-concurrency/05-taskgroup-timeouts-lesson.ipynb": {
+    "first": "# 05. TaskGroup and timeouts\n\n**Tier:** Deep. **Why you'd use this:** Several async jobs should start together, fail together, and respect a deadline. `TaskGroup` and `asyncio.timeout` give you that structure.\n\n**After this lesson you can:** run coroutines in a `TaskGroup`; cancel work with `asyncio.timeout`; explain that a failure cancels siblings.\nAbout 30 minutes. **Uses:** [Async](03-async-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Why can unlocked `+=` lose updates across threads?\n2. What does a `Lock` protect?\n\n<details><summary>Answers</summary>\n\nRead–modify–write is not one atomic step. The critical section you wrap so only one thread runs it at a time.\n</details>\n"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "course/09-recursion/01-base-case-lesson.ipynb": {
+    "first": "# 01. Base case\n\n**Tier:** Deep. **Why you'd use this:** You walk a countdown or a factorial-style problem where each call needs a smaller input and a clear stop. Without a base case, the calls never end.\n\n**After this lesson you can:** say which lines run on the way down and which run on the way back up; write a base case that makes the input smaller.\nAbout 25 minutes. **Uses:** [Functions](../05-functions/01-definitions-lesson.ipynb), [Loops](../03-control-flow/02-loops-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does a function return if it hits the end with no `return`?\n2. Can a function call itself? What must eventually happen?\n\n<details><summary>Answers</summary>\n\nIt returns `None`. Yes — and some call must stop (the base case) so the stack can unwind.\n</details>\n"
+  },
+  "course/09-recursion/02-structures-lesson.ipynb": {
+    "first": "# 02. Nested data\n\n**Tier:** Deep. **Why you'd use this:** A folder tree or a nested list of numbers is not a flat loop. You enter a node, handle children, then leave — and the print order of enter and leave shows that shape.\n\n**After this lesson you can:** follow the order of enter and leave prints on a tree; sum a nested list and a tree of tuples.\nAbout 25 minutes. **Uses:** [Base case](01-base-case-lesson.ipynb), [Lists](../04-collections/01-lists-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What is a base case for?\n2. What happens to the call stack as recursive calls go deeper?\n\n<details><summary>Answers</summary>\n\nIt stops the recursion with a direct answer. The stack grows with each call and shrinks on the way back up.\n</details>\n"
+  },
+  "course/09-recursion/03-limit-lesson.ipynb": {
+    "first": "# 03. The limit\n\n**Tier:** Deep. **Why you'd use this:** A deep tree walk can hit Python's recursion limit even when the last call looks like a \"tail\" call. Sometimes a loop over an explicit stack is the safer tool.\n\n**After this lesson you can:** explain that a tail call still grows the stack in Python; rewrite a tree walk as a loop over a list.\nAbout 25 minutes. **Uses:** [Nested data](02-structures-lesson.ipynb), [Errors](../06-errors/01-try-except-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. On a nested list `[1, [2, 3]]`, does the outer sum finish before the inner sum?\n2. Why does recursion fit trees better than a single flat `for`?\n\n<details><summary>Answers</summary>\n\nNo — the inner structure is summed during the outer call. A tree's children are the same kind of problem as the root.\n</details>\n"
+  },
+  "course/09-recursion/04-memoization-lesson.ipynb": {
+    "first": "# 04. Memoization\n\n**Tier:** Deep. **Why you'd use this:** A recursive fib-style function recomputes the same smaller answers many times. A cache stores each answer once so later calls reuse it.\n\n**After this lesson you can:** recognize a cache hit; wire `cache` so the recursive calls go through it.\nAbout 25 minutes. **Uses:** [Base case](01-base-case-lesson.ipynb), [The limit](03-limit-lesson.ipynb), [itertools and cache](../08-collections-module/05-itertools-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Does Python reuse the current stack frame for a tail call?\n2. What is one way to walk a tree without deep recursion?\n\n<details><summary>Answers</summary>\n\nNo — each call still pushes a frame. Keep an explicit stack (a list) in a loop.\n</details>\n"
+  }
+}

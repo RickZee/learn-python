@@ -1,0 +1,2 @@
+# Structural lesson-template prompts only. At most 10 sentences.
+Answer these from the example above before you run the cell.

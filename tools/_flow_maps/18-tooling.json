@@ -1,0 +1,10 @@
+{
+  "course/18-tooling/01-tooling-lesson.ipynb": {
+    "first": "# 01. Tooling\n\n**Tier:** Intermediate. **Why you'd use this:** A small program needs logs you can filter later, and a linter that catches issues a type checker will not. `print` is fine for a scratch cell; it is a weak log for a real run.\n\n**After this lesson you can:** read a log line from a configured logger; choose `logging` over `print` for a program; say what ruff catches that a type checker does not.\nAbout 25 minutes. **Uses:** [Docstrings and hints](../05-functions/04-hints-lesson.ipynb), [pytest](../15-testing/00-pytest-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does a type hint help a reader or checker do?\n2. Name one thing pytest gives you over running a file by hand.\n\n<details><summary>Answers</summary>\n\nExpected types for parameters and results. Discovery, isolation, and clear pass/fail reports.\n</details>\n"
+  },
+  "course/18-tooling/02-protocols-and-generics-lesson.ipynb": {
+    "first": "# 02. Protocols and generics\n\n**Tier:** Intermediate. **Why you'd use this:** You want a function that accepts \"anything with `.read()`\" without a shared base class, or a helper that keeps the element type through a list transform. Protocols and generics spell that for checkers.\n\n**After this lesson you can:** explain that a `Protocol` matches structure, not inheritance; write a small generic function; use a `TypedDict` for a record shaped like a dict.\nAbout 30 minutes. **Uses:** [Docstrings and hints](../05-functions/04-hints-lesson.ipynb), [Classes](../11-classes/01-classes-lesson.ipynb), [Tooling](01-tooling-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Why prefer `logging` over `print` in a program you will run again?\n2. Name one class of issue ruff finds that types may miss.\n\n<details><summary>Answers</summary>\n\nLevels, configuration, and destinations. Unused imports, style, and some bug patterns without needing full type info.\n</details>\n"
+  }
+}

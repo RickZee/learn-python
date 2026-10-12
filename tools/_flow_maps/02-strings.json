@@ -1,0 +1,22 @@
+{
+  "course/02-strings/01-indexing-lesson.ipynb": {
+    "first": "# 01. Indexing\n\n**Tier:** Core. **Why you'd use this:** A receipt line is one string. You need the first character, a middle slice for the SKU, and a safe slice that does not crash when the line is short.\n\n**After this lesson you can:** take a character or a slice, including one that runs past the end; explain why a partial slice is a new string; read an `IndexError` when an index is out of range.\nAbout 20 minutes. **Uses:** [Names](../01-basics/01-names-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. How do you test for a missing value with `None`?\n2. What does `else` on an `if` chain catch?\n\n<details><summary>Answers</summary>\n\nUse `value is None`. `else` runs when every `if` / `elif` above was false.\n</details>\n"
+  },
+  "course/02-strings/02-methods-lesson.ipynb": {
+    "first": "# 02. Methods\n\n**Tier:** Core. **Why you'd use this:** A CSV-ish line has spaces, and you need the words as a list, then one cleaned string again. Methods do that work, but they leave the original string alone.\n\n**After this lesson you can:** use `strip`, `split`, and `join` on text; explain why a method leaves the original string in place; choose `join` when many pieces become one string.\nAbout 20 minutes. **Uses:** [Indexing](01-indexing-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `\"abc\"[0]` give you? What about `\"abc\"[1:3]`?\n2. Why doesn't `\"abc\"[1:10]` raise `IndexError`?\n\n<details><summary>Answers</summary>\n\n`a` and `bc`. A slice stops at the end instead of raising; a single bad index raises.\n</details>\n"
+  },
+  "course/02-strings/03-formatting-lesson.ipynb": {
+    "first": "# 03. Formatting\n\n**Tier:** Core. **Why you'd use this:** You build a status line that mixes fixed words with a name and a count. An f-string keeps the template readable, and `!r` shows quotes and spaces when you are debugging.\n\n**After this lesson you can:** write an f-string with an expression inside the braces; choose `!r` when spaces and quotes must stay visible.\nAbout 20 minutes. **Uses:** [Methods](02-methods-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. After `s = \" a \".strip()`, what is `s`, and what is the original literal still bound to if you kept another name?\n2. How do you turn `[\"a\", \"b\"]` into `\"a-b\"`?\n\n<details><summary>Answers</summary>\n\n`strip` returns a new string; the old value is unchanged if something still points at it. `\"-\".join([\"a\", \"b\"])`.\n</details>\n"
+  },
+  "course/02-strings/04-specs-lesson.ipynb": {
+    "first": "# 04. Format specs\n\n**Tier:** Core. **Why you'd use this:** A price column needs two decimals, a count needs a thousands separator, and a label needs padding so a table lines up. Format specs sit inside the f-string braces.\n\n**After this lesson you can:** fix a number of decimals, add a thousands separator, and pad a field; explain why a width does not cut a longer value.\nAbout 20 minutes. **Uses:** [Formatting](03-formatting-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does an f-string replace inside `{...}`?\n2. When is `!r` more useful than the default conversion?\n\n<details><summary>Answers</summary>\n\nThe value of the expression. `!r` shows quotes and escape characters, which helps when spaces or empty strings matter.\n</details>\n"
+  },
+  "course/02-strings/05-regex-lesson.ipynb": {
+    "first": "# 05. Regular expressions\n\n**Tier:** Core. **Why you'd use this:** Log lines mix fixed words with ids and numbers. You need every id, or a cleaned line with ids blanked out, without writing a fragile chain of `split` calls.\n\n**After this lesson you can:** use `findall` and `sub` on a pattern; explain why a pattern is often a raw string; spot a greedy match that swallows too much.\nAbout 25 minutes. **Uses:** [Format specs](04-specs-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `f\"{3.14159:.2f}\"` print?\n2. Does a format width shorten a string that is already longer than the width?\n\n<details><summary>Answers</summary>\n\n`3.14`. No — width pads shorter values; it does not truncate longer ones.\n</details>\n"
+  }
+}

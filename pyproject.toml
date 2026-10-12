@@ -1,0 +1,78 @@
+[project]
+name = "learn-python"
+version = "0.1.0"
+description = "Lessons, practice, timed challenges, and projects for learning Python."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+ai = [
+    "pydantic>=2.14.0",
+]
+automation = [
+    "typer>=0.27.3",
+]
+cli = [
+    "rich>=15.0.0",
+    "typer>=0.27.3",
+]
+data = [
+    "matplotlib>=3.11.2",
+    "polars>=2.0.0",
+]
+dev = [
+    "ipykernel>=6.29",
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+    "pytest>=8",
+    "pytest-xdist>=3",
+    "ruff>=0.12",
+]
+scrape = [
+    "beautifulsoup4>=4.15.0",
+    "httpx>=0.28.1",
+]
+web = [
+    "fastapi>=0.143.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pylearn"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["review"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "N", "SIM", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"course/**/*-practice.ipynb" = ["F401"]        # imports in practice are hints
+"patterns/**/*-practice.ipynb" = ["F401"]
+"course/*pitfalls*/*.ipynb" = ["B006", "B023", "F632"]  # the mistake is the lesson
+"course/05-functions/02-arguments-lesson.ipynb" = ["B006"]  # mutable default is the lesson
+"course/05-functions/03-scope-lesson.ipynb" = ["B023"]  # late-binding loop is the lesson
+"course/06-errors/01-try-except-lesson.ipynb" = ["E722"]  # bare except is the lesson
+"course/06-errors/02-raise-lesson.ipynb" = ["B904"]  # missing from is the lesson
+"course/07-iteration/01-comprehensions-lesson.ipynb" = ["B007"]  # loop rebind is the lesson
+"course/13-modules/01-imports-lesson.ipynb" = ["E402"]  # mid-cell import is the lesson
+"course/14-files/04-text-and-bytes-lesson.ipynb" = ["E402", "UP012"]  # encoding is the lesson
+"course/14-files/04-text-and-bytes-practice.ipynb" = ["UP012"]  # encoding is the lesson
+"course/15-testing/*-lesson.ipynb" = ["F811"]  # repeated defs across teaching cells
+"course/17-concurrency/*-lesson.ipynb" = ["F811"]  # repeated imports/defs across teaching cells
+"internals/06-scopes/01-closures-lesson.ipynb" = ["B023", "F821", "F841"]  # the bug is the lesson
+"challenges/codebase-rounds/**/*.py" = ["B006"]  # planted mutable-default bugs in stubs
+"challenges/problems/*.ipynb" = ["F401"]  # import random marks the cross-check even unused

@@ -1,0 +1,14 @@
+{
+  "course/01-basics/01-names-lesson.ipynb": {
+    "first": "# 01. Names\n\n**Tier:** Core. **Why you'd use this:** You store a book title and a copy count under short names, then print them. When a name was never set, Python stops with `NameError`, and you need to know that the name and the value are not the same thing.\n\n**After this lesson you can:** read a value's type name with `type(...).__name__`; tell a name from the value it points at; read a `NameError` from the last line of the traceback.\nAbout 20 minutes. **Uses:** [Practice](../00-start/02-practice-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does a check's ✓ line mean?\n2. How is `return` different from `print` for a practice check?\n\n<details><summary>Answers</summary>\n\n✓ means that check passed. `return` gives the function's value to the check; `print` only writes text and the check cannot read it as the answer.\n</details>\n"
+  },
+  "course/01-basics/02-numbers-lesson.ipynb": {
+    "first": "# 02. Numbers\n\n**Tier:** Core. **Why you'd use this:** You have 10 seats and tables of 3. You need how many full tables fit and how many seats are left. The three division operators answer those questions differently, including with negative numbers.\n\n**After this lesson you can:** choose `/`, `//`, or `%` for a split into groups; explain why `-7 // 2` is not `-3`; split a count into full groups and a remainder.\nAbout 20 minutes. **Uses:** [Names](01-names-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `type(3).__name__` print?\n2. What error do you get from a name that was never assigned?\n\n<details><summary>Answers</summary>\n\n`int`. `NameError` — the last line names the missing name.\n</details>\n"
+  },
+  "course/01-basics/03-conditions-lesson.ipynb": {
+    "first": "# 03. Conditions: True, False, None, and `if`\n\n**Tier:** Core. **Why you'd use this:** A sensor reading might be missing (`None`), negative, or fine. You need one function that labels those cases without treating `None` as zero or as `False`.\n\n**After this lesson you can:** read the result of a comparison and of `and` / `or`; choose a branch with `if` / `elif` / `else`; test for a missing value with `is None`.\nAbout 25 minutes. **Uses:** [Names](01-names-lesson.ipynb), [Numbers](02-numbers-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What is `10 // 3`? What is `10 % 3`?\n2. Why might you reach for `//` instead of `/` when counting whole groups?\n\n<details><summary>Answers</summary>\n\n`3` and `1`. `//` drops the fraction so you get a whole number of groups; `/` keeps a float.\n</details>\n"
+  }
+}

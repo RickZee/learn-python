@@ -1,0 +1,6 @@
+{
+  "course/16-decorators/01-decorators-lesson.ipynb": {
+    "first": "# 01. Decorators\n\n**Tier:** Deep. **Why you'd use this:** You want the same timing or logging wrapper on several functions without pasting the wrapper by hand. `@decorator` is the short spelling of `f = decorator(f)`.\n\n**After this lesson you can:** say what a wrapper returns; write `@decorator` as `f = decorator(f)`; keep the original name with `functools.wraps`; build a decorator that takes arguments.\nAbout 30 minutes. **Uses:** [Scope](../05-functions/03-scope-lesson.ipynb), [Dataclasses](../11-classes/02-dataclasses-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does a nested function close over?\n2. Why might you care what `__name__` a wrapped function still has?\n\n<details><summary>Answers</summary>\n\nNames from the enclosing scope that it reads later. Logs, docs, and debuggers use the original name — `wraps` keeps it.\n</details>\n"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "outputStyle": "Python tutor",
+  "permissions": {
+    "deny": [
+      "Read(**/solutions/**)",
+      "Edit(**/*-practice.ipynb)",
+      "Edit(**/challenges/problems/**)",
+      "Edit(**/exercise/**)"
+    ]
+  }
+}

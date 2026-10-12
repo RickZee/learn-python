@@ -1,0 +1,10 @@
+{
+  "course/00-start/01-first-program-lesson.ipynb": {
+    "first": "# 01. First program\n\n**Tier:** Core. **Why you'd use this:** You want a tiny program that prints a greeting, and you need to know where to look when the first error appears. A notebook also keeps names between cells, which helps when you experiment and confuses you when you forget what already ran.\n\n**After this lesson you can:** run a short `.py` file and read what `print` writes; find the problem on the last line of an error; say what a notebook remembers between cells, and what a fresh run of a file forgets.\nAbout 20 minutes. **Uses:** nothing yet\n",
+    "quick_review": null
+  },
+  "course/00-start/02-practice-lesson.ipynb": {
+    "first": "# 02. How practice works\n\n**Tier:** Core. **Why you'd use this:** Every practice notebook in this course works the same way. You replace a stub, run checks, and read a ✓ or an error. Knowing that loop once saves you from fighting the harness on every later topic.\n\n**After this lesson you can:** replace `raise NotImplementedError` and run a check; tell `return` from `print` when a check reads a value; open a hint only after you have tried.\nAbout 20 minutes. **Uses:** [First program](01-first-program-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Where do you look first in an error message?\n2. Does a fresh run of a `.py` file remember names from the last run?\n\n<details><summary>Answers</summary>\n\nThe last line names the problem. A fresh run of a file starts empty; a notebook keeps names until you restart the kernel.\n</details>\n"
+  }
+}

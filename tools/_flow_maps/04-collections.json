@@ -1,0 +1,26 @@
+{
+  "course/04-collections/01-lists-lesson.ipynb": {
+    "first": "# 01. Lists\n\n**Tier:** Core. **Why you'd use this:** A packing list grows as you append items. Two names can point at the same list, so an edit through one name shows up through the other. You also need to know why adding at the end is cheap and inserting at the front is not.\n\n**After this lesson you can:** tell a change to the same list from building a new list; explain why `append` is cheap and `insert(0)` is not; read an `IndexError`.\nAbout 25 minutes. **Uses:** [Loops](../03-control-flow/02-loops-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `for n in range(3):` bind `n` to on each pass?\n2. How do you stop a loop early when you already have the answer?\n\n<details><summary>Answers</summary>\n\n`0`, then `1`, then `2`. Use `break`.\n</details>\n"
+  },
+  "course/04-collections/02-tuples-lesson.ipynb": {
+    "first": "# 02. Tuples\n\n**Tier:** Core. **Why you'd use this:** A city and a temperature travel together as one value. You unpack the pair, and you may need that pair as a dict key — a list cannot be a key.\n\n**After this lesson you can:** unpack a pair into two names; explain why a tuple can be a dict key and a list cannot; build a new tuple when a field has to change.\nAbout 20 minutes. **Uses:** [Lists](01-lists-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. After `a = b = [1]` and `a.append(2)`, what is `b`?\n2. Why is `insert(0, x)` slower than `append(x)` on a long list?\n\n<details><summary>Answers</summary>\n\n`[1, 2]` — both names point at the same list. Inserting at the front shifts every later item.\n</details>\n"
+  },
+  "course/04-collections/03-dicts-lesson.ipynb": {
+    "first": "# 03. Dicts\n\n**Tier:** Intermediate. **Why you'd use this:** You count how often each word appears in a short note. Looking up a word should stay fast as the note grows, and a missing word should not crash your loop.\n\n**After this lesson you can:** count items by key; explain why lookup stays fast as the dict grows; choose `get` when a missing key is normal.\nAbout 30 minutes. **Uses:** [Loops](../03-control-flow/02-loops-lesson.ipynb), [Tuples](02-tuples-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Can a list be a dict key? Can a tuple of strings?\n2. How do you \"change\" one field of a tuple?\n\n<details><summary>Answers</summary>\n\nA list cannot; a tuple of strings can. Build a new tuple with the updated field.\n</details>\n"
+  },
+  "course/04-collections/04-sets-lesson.ipynb": {
+    "first": "# 04. Sets\n\n**Tier:** Intermediate. **Why you'd use this:** Two guest lists overlap. You want each name once, a fast \"is this person invited?\" check, and the names that appear on both lists or only on one.\n\n**After this lesson you can:** keep each value once; test membership without scanning a list; choose `&` or `-` for overlap and difference.\nAbout 25 minutes. **Uses:** [Dicts](03-dicts-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. Why is `\"to\" in counts` usually faster than `\"to\" in words` when `counts` is a dict?\n2. What does `counts.get(\"missing\", 0)` return when the key is absent?\n\n<details><summary>Answers</summary>\n\nDict lookup jumps by hash instead of scanning. `0` — the default.\n</details>\n"
+  },
+  "course/04-collections/05-zip-lesson.ipynb": {
+    "first": "# 05. Zip\n\n**Tier:** Core. **Why you'd use this:** Names and scores sit in two lists. You want pairs for a report, and you want a crash if one list is shorter so you do not silently drop a score.\n\n**After this lesson you can:** pair two lists with `zip`; number items with `enumerate`; choose `strict=True` when a short list must not drop leftover items.\nAbout 20 minutes. **Uses:** [Lists](01-lists-lesson.ipynb), [Loops](../03-control-flow/02-loops-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `{1, 2, 2, 3}` contain?\n2. How do you get names in both `a` and `b` when they are sets?\n\n<details><summary>Answers</summary>\n\n`{1, 2, 3}` — duplicates drop. `a & b`.\n</details>\n"
+  },
+  "course/04-collections/06-copying-lesson.ipynb": {
+    "first": "# 06. Copying\n\n**Tier:** Intermediate. **Why you'd use this:** A seating chart is a list of row lists. You make what you think is a backup, change one seat, and the \"backup\" changes too — unless you copied at the right depth.\n\n**After this lesson you can:** tell a shared list from a copy; choose a shallow copy or `deepcopy`; say which nested list an edit will change after each kind of copy.\nAbout 25 minutes. **Uses:** [Lists](01-lists-lesson.ipynb), [Dicts](03-dicts-lesson.ipynb)\n",
+    "quick_review": "## Quick review\n\n1. What does `zip(names, scores)` give you in a `for` loop?\n2. When should you pass `strict=True` to `zip`?\n\n<details><summary>Answers</summary>\n\nPairs `(name, score)` until one list ends. When unequal lengths are a bug you want to catch.\n</details>\n"
+  }
+}
