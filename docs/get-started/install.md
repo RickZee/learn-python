@@ -81,4 +81,4 @@ uv run python -c "import pylearn; print('ok')"
 
 You should see `ok`.
 
-**Next:** [Open your first notebook](first-notebook.md)
+**Next:** [Keep your fork up to date](updates.md) · [Open your first notebook](first-notebook.md)

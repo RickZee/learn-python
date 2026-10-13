@@ -1,4 +1,3 @@
-
 def trap(height: list[int]) -> int:
     """Water trapped between bars.
 

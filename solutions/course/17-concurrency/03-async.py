@@ -23,3 +23,8 @@ async def first_done(fast: float, slow: float) -> str:
     for task in pending:
         task.cancel()
     return done.pop().result()
+
+
+async def pause(delay: float) -> str:
+    await asyncio.sleep(delay)
+    return "done"

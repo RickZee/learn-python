@@ -6,7 +6,16 @@ def words(text: str) -> list[str]:
 
 
 def numbers(text: str) -> list[str]:
-    return re.findall(r"\d+", text)
+    pattern = r"\d+"
+    matches = re.findall(pattern, text)
+    result = list(matches)
+    return result
+
+
+def quoted(text: str) -> list[str]:
+    pattern = r'"([^"]*)"'
+    matches = re.findall(pattern, text)
+    return matches
 
 
 def redact(text: str) -> str:

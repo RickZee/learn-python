@@ -31,7 +31,7 @@ def execute_notebook(
         client = NotebookClient(
             working,
             timeout=120,
-            startup_timeout=120,
+            startup_timeout=30,
             kernel_name="python3",
             allow_errors=allow_errors,
             record_timing=False,

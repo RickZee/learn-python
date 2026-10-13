@@ -40,3 +40,7 @@ def lost_update() -> bool:
     for thread in threads:
         thread.join()
     return counter == 1
+
+
+def counter_style() -> str:
+    return "with lock"

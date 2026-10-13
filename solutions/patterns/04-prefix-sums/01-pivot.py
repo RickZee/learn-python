@@ -1,5 +1,3 @@
-
-
 def end_profit(prices: list[int]) -> int:
     if len(prices) < 2:
         return 0
@@ -8,6 +6,7 @@ def end_profit(prices: list[int]) -> int:
 
 def up_days(prices: list[int]) -> int:
     return sum(prices[index] > prices[index - 1] for index in range(1, len(prices)))
+
 
 def pivot_index(nums: list[int]) -> int:
     """Return an index whose left sum equals its right sum, or -1.

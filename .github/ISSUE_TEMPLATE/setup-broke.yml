@@ -1,0 +1,39 @@
+name: Setup broke
+description: Install, Codespaces, uv, pytest, or editor setup failed.
+title: "[setup] "
+labels: ["bug", "setup"]
+body:
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local (macOS)
+        - Local (Linux)
+        - Local (Windows)
+        - GitHub Codespaces
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: step
+    attributes:
+      label: Doc or command that failed
+      description: Path or command from the install / get-started docs.
+      placeholder: docs/get-started/install.md — uv sync
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output
+      description: Paste the full terminal error or Codespace log snippet.
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python / uv versions
+      description: Output of `python --version` and `uv --version` if you have them.
+    validations:
+      required: false

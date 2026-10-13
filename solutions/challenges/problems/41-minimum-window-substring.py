@@ -1,4 +1,3 @@
-
 def min_window(s: str, t: str) -> str:
     """Shortest substring of s that covers every character of t.
 

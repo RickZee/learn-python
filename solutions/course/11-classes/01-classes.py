@@ -8,3 +8,23 @@ class Point:
 
     def copy(self) -> "Point":
         return Point(self.x, self.y)
+
+
+class Bag:
+    def __init__(self, name: str) -> None:
+        self.name = name
+        self.tags = []
+
+
+def make_bags() -> list:
+    first = Bag("a")
+    second = Bag("b")
+    first.tags.append("x")
+    return [first.tags, second.tags]
+
+
+def shift_point(x: int, y: int, dx: int, dy: int) -> tuple[int, int]:
+    point = Point(x, y)
+    moved = point.moved(dx, dy)
+    result = (moved.x, moved.y)
+    return result

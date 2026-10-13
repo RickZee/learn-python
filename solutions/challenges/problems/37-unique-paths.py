@@ -1,4 +1,3 @@
-
 def unique_paths(m: int, n: int) -> int:
     """Ways to walk an m by n grid moving only right or down.
 

@@ -1,5 +1,3 @@
-
-
 def product_all(nums: list[int]) -> int:
     result = 1
     for value in nums:
@@ -9,6 +7,7 @@ def product_all(nums: list[int]) -> int:
 
 def zero_count(nums: list[int]) -> int:
     return sum(value == 0 for value in nums)
+
 
 def range_sum(nums: list[int], left: int, right: int) -> int:
     """Return the sum of nums[left] through nums[right], inclusive.

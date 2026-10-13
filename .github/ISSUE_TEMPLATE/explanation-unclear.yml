@@ -1,0 +1,34 @@
+name: Explanation unclear
+description: The wording is confusing, incomplete, or hard to follow (not necessarily wrong).
+title: "[unclear] "
+labels: ["content"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: File path
+      description: Repo path to the lesson, practice, or docs page.
+      placeholder: course/07-iteration/02-generators-lesson.ipynb
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where you got stuck
+      description: Section heading, cell, or quote the sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: confusion
+    attributes:
+      label: What is unclear
+      description: What you thought it meant, and what you still need.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Optional suggestion
+      description: A clearer wording if you have one. Not required.
+    validations:
+      required: false

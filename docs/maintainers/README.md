@@ -26,7 +26,7 @@ Refresh notebook outputs after you edit a lesson:
 uv run python tools/refresh_outputs.py path/to/notebook.ipynb
 ```
 
-Authoring rules live in `AGENTS.md` at the repo root. Concept order is in [concepts.md](concepts.md). Status files: [upgrade-status](upgrade-status.md), [challenge-upgrade-status](challenge-upgrade-status.md), [pattern-upgrade-status](pattern-upgrade-status.md), [flow-upgrade-status](flow-upgrade-status.md).
+Authoring rules live in [authoring.md](authoring.md). `AGENTS.md` at the repo root is the tutor/authoring router. Concept order is in [concepts.md](concepts.md). Pending guard paths: [status.md](status.md).
 
 ## Author mode (AI tools)
 

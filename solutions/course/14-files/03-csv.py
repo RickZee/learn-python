@@ -1,4 +1,3 @@
-
 import csv
 import io
 
@@ -14,4 +13,11 @@ def qty_sum(text: str) -> int:
 
 def order_count(text: str) -> int:
     rows = csv.DictReader(io.StringIO(text))
-    return sum(1 for _ in rows)
+    total = 0
+    for _ in rows:
+        total += 1
+    return total
+
+
+def open_csv_kwargs() -> dict:
+    return {"encoding": "utf-8", "newline": ""}

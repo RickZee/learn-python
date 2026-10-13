@@ -1,4 +1,3 @@
-
 def preorder(node) -> list[int]:
     if node is None:
         return []

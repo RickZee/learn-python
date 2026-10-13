@@ -9,6 +9,7 @@ Every learner and maintainer page in one place.
 | Page | What it is |
 | --- | --- |
 | [Install](get-started/install.md) | Codespaces, Mac, Windows, or Linux |
+| [Updates](get-started/updates.md) | Fork, branch, and pull new lessons |
 | [First notebook](get-started/first-notebook.md) | Open, pick a kernel, run a cell |
 | [How lessons work](get-started/how-lessons-work.md) | Lesson → practice → exercise → project |
 | [Troubleshooting](get-started/troubleshooting.md) | Common setup and notebook fixes |

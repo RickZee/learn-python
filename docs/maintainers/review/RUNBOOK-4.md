@@ -2,7 +2,7 @@
 
 Run this after runbook 3 (`PROGRESS-3.md` D19). Work list: [PROGRESS-4.md](PROGRESS-4.md). Reasons: [CRITIQUE-3.md](CRITIQUE-3.md).
 
-**Start or resume with:**
+**Start or resume with:** (historical)
 
 > Follow `docs/maintainers/review/RUNBOOK-4.md`. Continue from the first unchecked item in `docs/maintainers/review/PROGRESS-4.md`. Do not stop until every item is checked or you hit a blocker as defined in `RUNBOOK-2.md`.
 

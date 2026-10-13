@@ -223,3 +223,7 @@ __marimo__/
 
 # Private drafts and notes (not published)
 .archive/
+
+# Cursor learner mode (tools/learner_mode.py); never commit these
+.cursorignore
+.cursor/rules/learner-mode.mdc

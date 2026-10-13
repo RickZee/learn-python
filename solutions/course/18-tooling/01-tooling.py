@@ -18,3 +18,7 @@ def info_ready() -> str:
     log.propagate = False
     log.info("ready")
     return buffer.getvalue()
+
+
+def log_level_name() -> str:
+    return "info"

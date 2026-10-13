@@ -1,4 +1,3 @@
-
 def once():
     yield 1
 
@@ -16,11 +15,17 @@ def square_list(nums: list[int]) -> list[int]:
     return list(squares(nums))
 
 
+def sum_twice(nums: list[int]) -> tuple[int, int]:
+    def gen():
+        for n in nums:
+            yield n * n
+
+    first = sum(gen())
+    second = sum(gen())
+    return first, second
+
+
 def over_limit(readings: list[int], limit: int):
     for value in readings:
         if value > limit:
             yield value
-
-
-def flagged(readings: list[int], limit: int) -> list[int]:
-    return list(over_limit(readings, limit))

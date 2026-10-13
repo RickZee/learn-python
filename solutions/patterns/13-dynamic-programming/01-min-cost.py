@@ -1,5 +1,3 @@
-
-
 def small(n: int) -> int:
     if n <= 2:
         return n
@@ -13,6 +11,7 @@ def climb_three(n: int) -> int:
     for _ in range(4, n + 1):
         one, two, three = two, three, one + two + three
     return three
+
 
 def min_cost(cost: list[int]) -> int:
     """Minimum cost to reach the top. You may start on step 0 or 1, and climb 1 or 2 steps.

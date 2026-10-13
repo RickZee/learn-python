@@ -32,7 +32,7 @@ Each link opens the first lesson. Contrast notes: [experienced path](../paths/ex
 | [13-modules](../../course/13-modules/01-imports-lesson.ipynb) | `import`, `__main__`, packages, `uv add` |
 | [14-files](../../course/14-files/01-paths-lesson.ipynb) | Paths, JSON, CSV, text/bytes, dates |
 | [15-testing](../../course/15-testing/00-pytest-lesson.ipynb) | pytest, tests, mocking |
-| [16-decorators](../../course/16-decorators/01-decorators-lesson.ipynb) | Wrappers and `functools.wraps` |
+| [16-decorators](../../course/16-decorators/01-decorators-lesson.ipynb) | Wrappers, class decorators, cache, `partial` |
 | [17-concurrency](../../course/17-concurrency/01-threads-lesson.ipynb) | Threads, processes, async, races, TaskGroup |
 | [18-tooling](../../course/18-tooling/01-tooling-lesson.ipynb) | ruff, logging, Protocols, generics, TypedDict |
 

@@ -18,9 +18,15 @@ def http_label(code: int) -> str:
             return "other"
 
 
-def client_or_other(code: int) -> str:
-    match code:
-        case 400 | 404:
-            return "client"
+def label_status(status: str) -> str:
+    match status:
+        case "ok":
+            return "fine"
         case _:
-            return "other"
+            return "bad"
+
+
+def client_or_other(code: int) -> str:
+    if 400 <= code <= 499:
+        return "client"
+    return "other"

@@ -1,5 +1,3 @@
-
-
 def only_parens(s: str) -> bool:
     depth = 0
     for character in s:
@@ -22,6 +20,7 @@ def nesting_depth(s: str) -> int:
         elif character == ")":
             depth -= 1
     return best
+
 
 def backspace_compare(left: str, right: str) -> bool:
     """True when both strings are equal after applying backspaces. # deletes one character.

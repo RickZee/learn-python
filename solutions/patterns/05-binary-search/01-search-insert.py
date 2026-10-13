@@ -1,5 +1,3 @@
-
-
 def contains(nums: list[int], target: int) -> bool:
     left, right = 0, len(nums) - 1
     while left <= right:
@@ -24,6 +22,7 @@ def first_at_least(nums: list[int], target: int) -> int:
         else:
             left = mid + 1
     return answer
+
 
 def search_insert(nums: list[int], target: int) -> int:
     """Return the index of target, or the index where it should be inserted.

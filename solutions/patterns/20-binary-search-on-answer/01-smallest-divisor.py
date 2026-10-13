@@ -8,6 +8,7 @@ def ship_within_days(weights: list[int], days: int) -> int:
                 load = 0
             load += w
         return need <= days
+
     lo, hi = max(weights), sum(weights)
     while lo < hi:
         mid = (lo + hi) // 2

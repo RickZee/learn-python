@@ -1,4 +1,3 @@
-
 def neighbors(n: int, edges: list[list[int]]) -> list[list[int]]:
     graph = [[] for _ in range(n)]
     for left, right in edges:

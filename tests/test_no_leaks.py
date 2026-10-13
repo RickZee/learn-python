@@ -69,6 +69,7 @@ def test_patterns_do_not_copy_challenge_asserts() -> None:
 
 def _normalize_body(node: ast.AST) -> str:
     """Drop names that differ but keep control-flow shape of a function body."""
+
     class Strip(ast.NodeTransformer):
         def visit_Name(self, node: ast.Name) -> ast.Name:
             return ast.copy_location(ast.Name(id="N", ctx=node.ctx), node)
@@ -132,4 +133,3 @@ def test_pattern_bodies_do_not_match_challenge_solutions() -> None:
         if body in challenge_dumps and len(body) > 80  # ignore tiny stubs
     )
     assert not leaks, "pattern function bodies match challenge solutions: " + ", ".join(leaks)
-

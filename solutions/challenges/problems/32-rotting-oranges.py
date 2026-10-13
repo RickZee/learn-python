@@ -1,4 +1,3 @@
-
 def oranges_rotting(grid: list[list[int]]) -> int:
     """Minutes until every fresh orange rots, or -1.
 

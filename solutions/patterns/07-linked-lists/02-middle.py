@@ -1,4 +1,3 @@
-
 def middle_value(head) -> int:
     """Return the middle value. On an even length, return the second middle.
 

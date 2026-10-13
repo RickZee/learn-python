@@ -30,3 +30,14 @@ def depth_stack(items: list) -> int:
         for item in current:
             pending.append((item, depth + 1))
     return best
+
+
+def tree_sum_stack(node: tuple) -> int:
+    pending = [node]
+    total = 0
+    while pending:
+        value, children = pending.pop()
+        total += value
+        for child in children:
+            pending.append(child)
+    return total

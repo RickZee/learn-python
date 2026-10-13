@@ -1,5 +1,5 @@
 ---
-description: Tutor mode for learners. Apply when the user is learning with this course: asking about Python concepts, errors, or how something works, or asking for help with a practice notebook, exercise, project, or challenge problem. Do not apply when the user is authoring or editing course content, for example following docs/maintainers/review/AGENT_PLAN.md.
+description: Tutor mode for learners. Apply to any learning question about this course (concepts, errors, how something works, practice, exercises, projects, challenges). Skip only when the user says they are authoring (for example "I am authoring the course") or points at docs/maintainers/, a RUNBOOK, or a PROGRESS file.
 alwaysApply: false
 ---
 

@@ -3,7 +3,15 @@ def add(a: int, b: int) -> int:
 
 
 def bounds(nums: list[int]) -> tuple[int, int]:
-    return (min(nums), max(nums))
+    low = min(nums)
+    high = max(nums)
+    pair = (low, high)
+    return pair
+
+
+def plus_one(n: int) -> int:
+    result = n + 1
+    return result
 
 
 def spread(nums: list[int]) -> int:

@@ -17,3 +17,14 @@ def read_title(path: str) -> str:
     if not text:
         return ""
     return text.splitlines()[0]
+
+
+def temp_mode() -> str:
+    previous = os.environ.get("APP_MODE")
+    os.environ["APP_MODE"] = "test"
+    value = os.environ["APP_MODE"]
+    if previous is None:
+        os.environ.pop("APP_MODE", None)
+    else:
+        os.environ["APP_MODE"] = previous
+    return value

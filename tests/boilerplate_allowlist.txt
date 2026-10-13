@@ -1,2 +1,7 @@
 # Structural lesson-template prompts only. At most 10 sentences.
 Answer these from the example above before you run the cell.
+State the time and space cost, and say why in one sentence each.
+Then read the walkthrough and compare its trace with yours.
+Replace , run the cell, and read the ✓ lines or the error.
+This function has the bug from the lesson's Common mistake.
+Find it, say why it happens in one sentence, then fix it.

@@ -2,7 +2,7 @@
 
 # Projects
 
-Six projects are deep builds. Explore pages are shorter: read the page, run the lesson, do the task, then stop.
+Six projects are deep builds, plus one capstone. Explore pages are shorter: read the page, run the lesson, do the task, then stop.
 
 ## Projects
 
@@ -14,6 +14,7 @@ Six projects are deep builds. Explore pages are shorter: read the page, run the 
 | [expenses](08-data-analysis/project/README.md) | Summarize a bank CSV | ~90 |
 | [ticket-triage](09-machine-learning/project/README.md) | Label tickets with a fake client | ~120 |
 | [price-watch](12-scraping/project/README.md) | Read a price from saved HTML | ~90 |
+| [reading-list](capstone/project/README.md) | Capstone: CLI + API + CSV + enrich | ~180 |
 
 ## Explore pages
 

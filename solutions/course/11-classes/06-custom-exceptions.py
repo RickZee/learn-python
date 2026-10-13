@@ -16,4 +16,14 @@ def form_error() -> str:
     try:
         raise NegativeAgeError("negative")
     except NegativeAgeError as error:
-        return str(error)
+        message = str(error)
+        return message
+
+
+def checked_age(age: int) -> int:
+    try:
+        if age < 0:
+            raise NegativeAgeError("negative")
+        return age
+    except NegativeAgeError:
+        return 0

@@ -1,4 +1,3 @@
-
 def insert(intervals: list[list[int]], new: list[int]) -> list[list[int]]:
     """Insert new into sorted non-overlapping intervals and merge.
 

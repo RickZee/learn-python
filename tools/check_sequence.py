@@ -18,6 +18,7 @@ NODE_CONCEPTS = {
     "IfExp": "conditions",
     "For": "loops",
     "While": "loops",
+    "NamedExpr": "walrus",
     "FunctionDef": "functions-basic",
     "Return": "functions-basic",
     "ClassDef": "classes",

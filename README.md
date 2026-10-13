@@ -51,6 +51,6 @@ Use Cursor, Claude, or any AI tool as a tutor: it explains, you write the code. 
 
 ## License and contributing
 
-MIT. Report a problem as a GitHub issue.
+MIT. See [CONTRIBUTING.md](CONTRIBUTING.md) to report a wrong lesson, unclear explanation, or broken setup.
 
-Editing the course? Start at [docs/maintainers/](docs/maintainers/README.md) (build, test, author mode). Agent rules live in `AGENTS.md`.
+Editing the course? Start at [docs/maintainers/](docs/maintainers/README.md) (build, test, author mode). Agent routing is in `AGENTS.md`; authoring rules are in [docs/maintainers/authoring.md](docs/maintainers/authoring.md).

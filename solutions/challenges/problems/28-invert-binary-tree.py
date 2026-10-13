@@ -1,4 +1,3 @@
-
 def invert_tree(root):
     """Swap every left and right child.
 

@@ -1,5 +1,3 @@
-
-
 def total(nums: list[int]) -> int:
     return sum(nums)
 
@@ -10,6 +8,7 @@ def min_subarray(nums: list[int]) -> int:
         current = min(value, current + value)
         best = min(best, current)
     return best
+
 
 def running_sum(nums: list[int]) -> list[int]:
     """Return the prefix sums, including each value.

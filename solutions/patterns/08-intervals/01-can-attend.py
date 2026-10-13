@@ -1,8 +1,5 @@
-
-
 def overlaps(left: list[int], right: list[int]) -> bool:
     return left[0] <= right[1] and right[0] <= left[1]
-
 
 
 def can_attend(intervals: list[list[int]]) -> bool:
@@ -16,6 +13,7 @@ def can_attend(intervals: list[list[int]]) -> bool:
     """
     ordered = sorted(intervals)
     return all(ordered[index][0] >= ordered[index - 1][1] for index in range(1, len(ordered)))
+
 
 def covered(intervals: list[list[int]]) -> int:
     return sum(end - start for start, end in intervals)

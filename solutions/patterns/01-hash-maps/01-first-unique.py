@@ -1,5 +1,3 @@
-
-
 def seen_index(nums: list[int], value: int) -> int:
     seen = {item: index for index, item in enumerate(nums)}
     return seen.get(value, -1)
@@ -10,6 +8,7 @@ def first_index(nums: list[int], value: int) -> int:
         if item == value:
             return index
     return -1
+
 
 def first_unique(text: str) -> int:
     """Return the index of the first character that appears once, or -1.

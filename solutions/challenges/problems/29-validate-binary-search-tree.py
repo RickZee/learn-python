@@ -1,4 +1,3 @@
-
 def is_valid_bst(root) -> bool:
     """True when every left value is smaller and every right value is larger.
 

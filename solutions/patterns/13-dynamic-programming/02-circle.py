@@ -1,5 +1,3 @@
-
-
 def best_end(nums: list[int]) -> int:
     if not nums:
         return 0
@@ -10,6 +8,7 @@ def best_end(nums: list[int]) -> int:
 
 def rob_even(nums: list[int]) -> int:
     return sum(nums[::2])
+
 
 def rob_circle(nums: list[int]) -> int:
     """Rob a circle of houses. The first and last are adjacent.

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import pathlib
+import subprocess
+import sys
 
 import pytest
 
@@ -29,3 +31,42 @@ def test_learner_profile() -> None:
     deny = settings["permissions"]["deny"]
     assert "Read(**/solutions/**)" in deny
     assert "Edit(**/*-practice.ipynb)" in deny
+
+
+def test_g15_agents_names_authoring() -> None:
+    text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    assert "docs/maintainers/authoring.md" in text
+
+
+def test_g15_learner_mode_on_off(tmp_path: pathlib.Path) -> None:
+    script = ROOT / "tools" / "learner_mode.py"
+    on = subprocess.run(
+        [sys.executable, str(script), "on", "--root", str(tmp_path)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert on.returncode == 0
+    ignore = tmp_path / ".cursorignore"
+    rule = tmp_path / ".cursor" / "rules" / "learner-mode.mdc"
+    assert ignore.is_file()
+    assert "solutions/" in ignore.read_text(encoding="utf-8")
+    assert rule.is_file()
+    rule_text = rule.read_text(encoding="utf-8")
+    assert "alwaysApply: true" in rule_text
+
+    off = subprocess.run(
+        [sys.executable, str(script), "off", "--root", str(tmp_path)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert off.returncode == 0
+    assert not ignore.exists()
+    assert not rule.exists()
+
+
+def test_g15_gitignore_lists_learner_mode_paths() -> None:
+    text = (ROOT / ".gitignore").read_text(encoding="utf-8")
+    assert ".cursorignore" in text
+    assert ".cursor/rules/learner-mode.mdc" in text

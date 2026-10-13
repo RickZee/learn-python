@@ -2,7 +2,7 @@
 
 This runbook is for Cursor or Claude Code. It drives everything left in [AGENT_PLAN-2.md](AGENT_PLAN-2.md) (R2–R6) through to completion. [PROGRESS-2.md](PROGRESS-2.md) is the work list and the memory between sessions.
 
-**Start or resume with:**
+**Start or resume with:** (historical)
 
 > Follow `review/RUNBOOK-2.md`. Continue from the first unchecked item in `review/PROGRESS-2.md`. Do not stop until every item is checked or you hit a blocker as defined in the runbook.
 

@@ -1,4 +1,3 @@
-
 def max_depth(root) -> int:
     """Longest root-to-leaf path, in nodes. Empty is 0.
 

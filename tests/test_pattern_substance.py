@@ -7,6 +7,8 @@ import pathlib
 
 import pytest
 
+from tests._text import normalize
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 FILLER = "so each step reuses prior work instead of restarting a nested scan"
 LESSONS = sorted(ROOT.glob("patterns/*/*-lesson.ipynb"))
@@ -46,11 +48,12 @@ def _missing_parts(headings: list[str]) -> list[str]:
 def test_pattern_lesson_has_substance(path: pathlib.Path) -> None:
     notebook = json.loads(path.read_text(encoding="utf-8"))
     whole = "\n".join(_text(cell) for cell in notebook["cells"])
+    normalized = normalize(whole)
     headings = _headings(notebook["cells"])
     problems: list[str] = []
-    if "Worked reading" in whole:
+    if normalize("Worked reading") in normalized:
         problems.append("contains Worked reading padding")
-    if FILLER in whole:
+    if normalize(FILLER) in normalized:
         problems.append("contains shared Why filler phrase")
     missing = _missing_parts(headings)
     if missing:

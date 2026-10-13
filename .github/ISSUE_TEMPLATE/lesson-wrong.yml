@@ -1,0 +1,34 @@
+name: Lesson is wrong
+description: A lesson or practice shows incorrect behavior, output, or facts.
+title: "[wrong] "
+labels: ["bug", "content"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: File path
+      description: Repo path to the notebook or exercise file.
+      placeholder: course/16-decorators/01-decorators-lesson.ipynb
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen
+      description: Correct result, output, or claim.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happens instead
+      description: Paste the traceback, wrong output, or wrong sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Cells you ran, or commands you used.
+    validations:
+      required: false

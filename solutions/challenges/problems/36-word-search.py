@@ -1,4 +1,3 @@
-
 def exist(board: list[list[str]], word: str) -> bool:
     """True when word is a path of adjacent cells, each used once.
 

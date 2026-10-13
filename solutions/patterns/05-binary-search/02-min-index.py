@@ -1,5 +1,3 @@
-
-
 def is_rotated(nums: list[int]) -> bool:
     if len(nums) < 2:
         return False
@@ -15,6 +13,7 @@ def rotation_index(nums: list[int]) -> int:
         else:
             right = mid
     return left
+
 
 def min_index(nums: list[int]) -> int:
     """Return the index of the minimum in a rotated sorted list of distinct values.

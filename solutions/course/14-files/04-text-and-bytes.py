@@ -7,4 +7,12 @@ def as_text(data: bytes) -> str:
 
 
 def wire_size(text: str) -> int:
-    return len(text.encode("utf-8"))
+    data = text.encode("utf-8")
+    size = len(data)
+    result = int(size)
+    return result
+
+
+def decode_cafe() -> str:
+    data = "café".encode("utf-8")
+    return data.decode("utf-8")

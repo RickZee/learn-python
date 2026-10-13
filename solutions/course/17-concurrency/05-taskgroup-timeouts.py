@@ -33,3 +33,9 @@ async def sibling_cancelled() -> bool:
     except Exception:
         return slow_task.cancelled()
     return False
+
+
+async def fire_and_forget() -> str:
+    async with asyncio.TaskGroup() as group:
+        group.create_task(asyncio.sleep(0.01))
+    return "done"

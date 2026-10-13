@@ -7,6 +7,8 @@ import re
 
 import pytest
 
+from tests._text import normalize
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 SOLUTIONS = ROOT / "solutions" / "challenges" / "problems"
 WORD = re.compile(r"[A-Za-z0-9']+")
@@ -59,5 +61,6 @@ def test_solution_has_a_walkthrough(path: pathlib.Path) -> None:
     assert _in_order(found), f"headings out of order or missing: {found}"
     words = len(WORD.findall(FENCE.sub(" ", text)))
     assert words >= MINIMUM_WORDS, f"walkthrough has {words} words; need {MINIMUM_WORDS}"
-    banned = [phrase for phrase in BANNED_PHRASES if phrase in text]
+    normalized = normalize(text)
+    banned = [phrase for phrase in BANNED_PHRASES if normalize(phrase) in normalized]
     assert not banned, "template phrases: " + "; ".join(banned)

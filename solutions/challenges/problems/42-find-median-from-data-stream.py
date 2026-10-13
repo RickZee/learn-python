@@ -1,4 +1,3 @@
-
 class MedianFinder:
     """Median of a stream.
 

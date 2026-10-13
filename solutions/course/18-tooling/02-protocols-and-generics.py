@@ -22,4 +22,11 @@ class Book(TypedDict):
 
 
 def shout_title(row: Book) -> str:
-    return row["title"].upper()
+    title = row["title"]
+    upper = title.upper()
+    result = str(upper)
+    return result
+
+
+def typed_dict_validates() -> bool:
+    return False

@@ -1,4 +1,3 @@
-
 def exported() -> str:
     import pylearn
 
@@ -14,4 +13,10 @@ def package_name() -> str:
 def has_check() -> bool:
     import pylearn
 
-    return hasattr(pylearn, "check")
+    present = hasattr(pylearn, "check")
+    name = pylearn.__name__
+    return present and bool(name)
+
+
+def edit_target() -> str:
+    return "project"

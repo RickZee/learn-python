@@ -1,4 +1,3 @@
-
 def lowest_common_ancestor(root, p: int, q: int) -> int:
     """Value of the lowest common ancestor in a BST.
 

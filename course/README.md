@@ -22,7 +22,7 @@ Part 1 units are lesson and practice notebooks. Part 2 units also add an `exerci
 | [13-modules](13-modules/01-imports-lesson.ipynb) | Imports, `__main__`, packages (Part 2) | ~70 |
 | [14-files](14-files/01-paths-lesson.ipynb) | Paths, JSON, CSV, text, dates (Part 2) | ~120 |
 | [15-testing](15-testing/00-pytest-lesson.ipynb) | pytest, unittest, mocking (Part 2) | ~80 |
-| [16-decorators](16-decorators/01-decorators-lesson.ipynb) | Wrappers and `wraps` | ~30 |
+| [16-decorators](16-decorators/01-decorators-lesson.ipynb) | Wrappers, class decorators, cache, `partial` | ~65 |
 | [17-concurrency](17-concurrency/01-threads-lesson.ipynb) | Threads, processes, async (Part 2) | ~145 |
 | [18-tooling](18-tooling/01-tooling-lesson.ipynb) | Logging, ruff, Protocols (Part 2) | ~55 |
 

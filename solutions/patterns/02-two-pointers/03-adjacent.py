@@ -1,5 +1,3 @@
-
-
 def end_area(height: list[int]) -> int:
     width = len(height) - 1
     return min(height[0], height[-1]) * width
@@ -7,6 +5,7 @@ def end_area(height: list[int]) -> int:
 
 def widest(height: list[int]) -> int:
     return end_area(height)
+
 
 def adjacent_max(nums: list[int]) -> int:
     """Return the largest sum of two neighbors, or 0 when there is no pair.

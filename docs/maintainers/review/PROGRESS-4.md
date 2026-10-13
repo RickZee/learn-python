@@ -1,5 +1,7 @@
 # Progress 4: substance, challenges rename, honest depth
 
+Note (round 5): O1/O2 missed challenge problems 13–42; fixed in round 5.
+
 Start only after runbook 3 is done. Work top to bottom. See [RUNBOOK-4.md](RUNBOOK-4.md) and [CRITIQUE-3.md](CRITIQUE-3.md).
 
 ## Blockers

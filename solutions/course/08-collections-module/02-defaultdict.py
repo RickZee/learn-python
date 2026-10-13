@@ -15,9 +15,13 @@ def group_by_length(words: list[str]) -> dict[int, list[str]]:
     return dict(groups)
 
 
+def has_key(groups: dict, key: str) -> bool:
+    return key in groups
+
+
 def even_odd(nums: list[int]) -> dict[str, list[int]]:
     groups = defaultdict(list)
     for value in nums:
-        key = "even" if value % 2 == 0 else "odd"
-        groups[key].append(value)
+        label = "even" if value % 2 == 0 else "odd"
+        groups[label].append(value)
     return dict(groups)

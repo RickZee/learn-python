@@ -1,5 +1,3 @@
-
-
 def zero_pairs(nums: list[int]) -> int:
     ordered = sorted(nums)
     count = 0
@@ -15,7 +13,6 @@ def zero_pairs(nums: list[int]) -> int:
         else:
             right -= 1
     return count
-
 
 
 def sorted_squares(nums: list[int]) -> list[int]:
@@ -37,6 +34,7 @@ def sorted_squares(nums: list[int]) -> list[int]:
             answer[index] = nums[right] * nums[right]
             right -= 1
     return answer
+
 
 def has_triplet(nums: list[int]) -> bool:
     return len(nums) >= 3

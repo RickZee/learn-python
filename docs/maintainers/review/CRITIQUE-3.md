@@ -135,7 +135,7 @@ Still worth doing, but after the hollow-content fixes:
 
 ## Suggested agent kickoff
 
-> Read `docs/maintainers/review/CRITIQUE-3.md`. Do **phase N** only (guards → patterns → walkthroughs → oracles → trim → polish → gate). Follow `AGENTS.md`. Never pad. Never type notebook outputs; use `tools/refresh_outputs.py`. When done, show acceptance checks and stop.
+> (historical) Read `docs/maintainers/review/CRITIQUE-3.md`. Do **phase N** only (guards → patterns → walkthroughs → oracles → trim → polish → gate). Follow `AGENTS.md`. Never pad. Never type notebook outputs; use `tools/refresh_outputs.py`. When done, show acceptance checks and stop.
 
 ## Success looks like
 

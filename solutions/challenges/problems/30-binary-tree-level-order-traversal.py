@@ -1,4 +1,3 @@
-
 def level_order(root) -> list[list[int]]:
     """Values one depth at a time.
 

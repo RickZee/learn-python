@@ -2,7 +2,7 @@
 
 Run this **after round 2 is finished** (`review/PROGRESS-2.md` item F5 checked). It uses the same loop and stop rules as [RUNBOOK-2.md](RUNBOOK-2.md): pick the next item, do it, verify, self-review, commit, tick, continue. The work list is [PROGRESS-3.md](PROGRESS-3.md). Work on a new branch, `review/docs-run`, and merge to `main` at the end.
 
-**Start or resume with:**
+**Start or resume with:** (historical)
 
 > Follow `review/RUNBOOK-3.md`. Continue from the first unchecked item in `review/PROGRESS-3.md`. Do not stop until every item is checked or you hit a blocker as defined in `review/RUNBOOK-2.md`.
 

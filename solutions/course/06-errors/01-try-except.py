@@ -7,9 +7,10 @@ def parse_int(text: str):
 
 def safe_div(left: float, right: float) -> float | None:
     try:
-        return left / right
+        result = left / right
     except ZeroDivisionError:
         return None
+    return result
 
 
 def safe_int(text: str):

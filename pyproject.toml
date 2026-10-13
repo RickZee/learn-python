@@ -60,8 +60,8 @@ extend-exclude = ["review"]
 select = ["E", "F", "W", "B", "UP", "N", "SIM", "I"]
 
 [tool.ruff.lint.per-file-ignores]
-"course/**/*-practice.ipynb" = ["F401"]        # imports in practice are hints
-"patterns/**/*-practice.ipynb" = ["F401"]
+"course/**/*-practice.ipynb" = ["F401", "F811", "E402"]  # hints; redefs across cells; import after warm-up scramble
+"patterns/**/*-practice.ipynb" = ["F401", "F811", "E402"]
 "course/*pitfalls*/*.ipynb" = ["B006", "B023", "F632"]  # the mistake is the lesson
 "course/05-functions/02-arguments-lesson.ipynb" = ["B006"]  # mutable default is the lesson
 "course/05-functions/03-scope-lesson.ipynb" = ["B023"]  # late-binding loop is the lesson
@@ -73,6 +73,18 @@ select = ["E", "F", "W", "B", "UP", "N", "SIM", "I"]
 "course/14-files/04-text-and-bytes-practice.ipynb" = ["UP012"]  # encoding is the lesson
 "course/15-testing/*-lesson.ipynb" = ["F811"]  # repeated defs across teaching cells
 "course/17-concurrency/*-lesson.ipynb" = ["F811"]  # repeated imports/defs across teaching cells
+"course/16-decorators/*-lesson.ipynb" = ["F811"]  # repeated imports/defs across teaching cells
 "internals/06-scopes/01-closures-lesson.ipynb" = ["B023", "F821", "F841"]  # the bug is the lesson
 "challenges/codebase-rounds/**/*.py" = ["B006"]  # planted mutable-default bugs in stubs
-"challenges/problems/*.ipynb" = ["F401"]  # import random marks the cross-check even unused
+
+"course/03-control-flow/01-decisions-practice.ipynb" = ["F401", "F811", "E402", "F841"]  # Debug match capture
+"course/04-collections/05-zip-practice.ipynb" = ["F401", "F811", "E402", "B905"]  # Debug zip without strict
+"course/04-collections/06-copying-practice.ipynb" = ["F401", "F811", "E402", "SIM222"]  # Debug or True
+"course/05-functions/03-scope-practice.ipynb" = ["F401", "F811", "E402", "B023"]  # Debug late binding
+"course/06-errors/01-try-except-practice.ipynb" = ["F401", "F811", "E402", "E722"]  # Debug bare except
+"course/06-errors/02-raise-practice.ipynb" = ["F401", "F811", "E402", "B904"]  # Debug raise without from
+"course/14-files/02-json-practice.ipynb" = ["F401", "F811", "E402", "F841"]  # Debug unused
+"solutions/course/**/*.py" = ["F401", "F811", "F841", "I001", "UP012", "B905"]  # mirror practice quirks
+"use-cases/**/src/**/*.py" = ["B008"]  # typer.Option defaults
+"solutions/use-cases/**/src/**/*.py" = ["B008", "E501"]  # typer.Option; long FastAPI lines
+"challenges/problems/*.ipynb" = ["F401", "E402"]  # F401: random may be unused; E402: cross_check import after stub

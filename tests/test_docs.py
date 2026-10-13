@@ -120,8 +120,14 @@ def _word_limit(path: pathlib.Path) -> int:
         return 1000
     if rel == "docs/guides/learning-with-ai.md":
         return 1000
+    if rel == "docs/maintainers/authoring.md":
+        return 10_000  # agent rules (moved from AGENTS.md); not learner prose
+    if rel == "docs/maintainers/status.md":
+        return 10_000  # pending path list for guards; not learner prose
     if rel == "challenges/python-questions.md":
         return 10_000
+    if rel == "challenges/README.md":
+        return 2_000  # 68-problem index table; not essay prose
     return 600
 
 
@@ -140,8 +146,7 @@ def test_docs_are_reachable_navigable_and_short() -> None:
     orphans = [
         path
         for path in files
-        if path.resolve() not in {p.resolve() for p in reachable}
-        and path != ROOT / "README.md"
+        if path.resolve() not in {p.resolve() for p in reachable} and path != ROOT / "README.md"
     ]
     assert not orphans, "orphan docs:\n" + "\n".join(
         p.relative_to(ROOT).as_posix() for p in orphans
@@ -174,8 +179,10 @@ def test_docs_are_reachable_navigable_and_short() -> None:
                 ):
                     problems.append(f"{rel}: banned '{label}'")
                 continue
-            if label == "use case" and "use-cases" in text and not pattern.search(
-                text.replace("use-cases", "")
+            if (
+                label == "use case"
+                and "use-cases" in text
+                and not pattern.search(text.replace("use-cases", ""))
             ):
                 continue
             if pattern.search(text):

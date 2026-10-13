@@ -11,6 +11,8 @@ A lesson or practice may use a concept only at or after the lesson that introduc
 | f-strings | course/02-strings/03-formatting-lesson.ipynb |
 | match | course/03-control-flow/01-decisions-lesson.ipynb |
 | loops | course/03-control-flow/02-loops-lesson.ipynb |
+| walrus | course/03-control-flow/02-loops-lesson.ipynb |
+| enumerate | course/04-collections/05-zip-lesson.ipynb |
 | star-args | course/05-functions/02-arguments-lesson.ipynb |
 | exceptions | course/06-errors/01-try-except-lesson.ipynb |
 | raise | course/06-errors/02-raise-lesson.ipynb |

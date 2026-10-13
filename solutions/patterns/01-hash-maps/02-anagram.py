@@ -11,6 +11,7 @@ def by_length(words: list[str]) -> dict[int, list[str]]:
         groups[len(word)].append(word)
     return dict(groups)
 
+
 def is_anagram(left: str, right: str) -> bool:
     """True when both strings use the same characters the same number of times.
 

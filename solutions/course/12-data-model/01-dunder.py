@@ -1,4 +1,3 @@
-
 class Count:
     def __init__(self, n: int) -> None:
         self.n = n
@@ -20,7 +19,10 @@ class Bag:
 
 
 def at(items: list[str], index: int) -> str:
-    return Bag(items)[index]
+    bag = Bag(items)
+    value = bag[index]
+    text = str(value)
+    return text
 
 
 class Pocket:
@@ -33,3 +35,18 @@ class Pocket:
 
 def holds(items: list[str], item: str) -> bool:
     return item in Pocket(items)
+
+
+class Box:
+    def __init__(self, value: int) -> None:
+        self.value = value
+
+    def __eq__(self, other) -> bool:
+        return isinstance(other, Box) and self.value == other.value
+
+    def __hash__(self) -> int:
+        return hash(self.value)
+
+
+def unique_boxes() -> int:
+    return len({Box(1), Box(1)})

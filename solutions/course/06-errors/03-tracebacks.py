@@ -1,4 +1,3 @@
-
 def error_name() -> str:
     try:
         [0][1]

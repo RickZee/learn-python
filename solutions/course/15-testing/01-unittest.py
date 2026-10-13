@@ -26,3 +26,10 @@ def test_evens() -> None:
     assert evens([1, 2, 3, 4]) == [2, 4]
     assert evens([]) == []
     assert evens([1, 3]) == []
+
+
+def check_evens() -> bool:
+    ok_happy = evens([2, 4]) == [2, 4]
+    ok_empty = evens([]) == []
+    ok_odds = evens([1, 3]) == []
+    return ok_happy and ok_empty and ok_odds

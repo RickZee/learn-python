@@ -25,3 +25,11 @@ def tree_depth(node: tuple) -> int:
     for child in children:
         best = max(best, tree_depth(child))
     return 1 + best
+
+
+def tree_sum(node: tuple) -> int:
+    value, children = node
+    total = value
+    for child in children:
+        total += tree_sum(child)
+    return total

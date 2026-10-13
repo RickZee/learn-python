@@ -1,4 +1,3 @@
-
 class Trie:
     """insert, search, and starts_with.
 

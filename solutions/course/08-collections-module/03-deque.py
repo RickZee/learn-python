@@ -2,7 +2,9 @@ from collections import deque
 
 
 def pop_front(items: list[int]) -> int:
-    return deque(items).popleft()
+    queue = deque(items)
+    value = queue.popleft()
+    return value
 
 
 def rotate_queue(items: list[int], k: int) -> list[int]:
@@ -15,7 +17,4 @@ def rotate_queue(items: list[int], k: int) -> list[int]:
 
 
 def tail(items: list[int], k: int) -> list[int]:
-    recent = deque(maxlen=k)
-    for item in items:
-        recent.append(item)
-    return list(recent)
+    return list(deque(items, maxlen=k))

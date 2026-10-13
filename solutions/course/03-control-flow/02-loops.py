@@ -9,8 +9,18 @@ def count_char(text: str, target: str) -> int:
 def sum_to(n: int) -> int:
     total = 0
     for value in range(1, n + 1):
-        total += value
+        total = total + value
     return total
+
+
+def vowels_or_none(text: str) -> str:
+    found = ""
+    for char in text:
+        if char in "aeiou":
+            found = found + char
+    if found == "":
+        return "none"
+    return found
 
 
 def aisle_seats(n: int) -> int:

@@ -1,1 +1,1 @@
-"""Reference csvtool."""
+"""CSV command line."""

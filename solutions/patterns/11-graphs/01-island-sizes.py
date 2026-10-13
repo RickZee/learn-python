@@ -1,5 +1,3 @@
-
-
 def cell_count(grid: list[list[str]]) -> int:
     return sum(cell == "1" for row in grid for cell in row)
 
@@ -28,6 +26,7 @@ def largest_island(grid: list[list[str]]) -> int:
             if grid[row][col] == "1":
                 best = max(best, measure(row, col))
     return best
+
 
 def island_sizes(grid: list[list[str]]) -> list[int]:
     """Return the sizes of the islands, sorted. Land is "1".

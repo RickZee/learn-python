@@ -19,3 +19,7 @@ def doubled(nums: list[int]) -> list[int]:
 
 def sum_squares(nums: list[int]) -> int:
     return sum(squares(nums))
+
+
+def cpu_choice() -> str:
+    return "processes"

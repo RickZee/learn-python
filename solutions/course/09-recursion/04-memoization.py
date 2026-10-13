@@ -38,3 +38,17 @@ def choose_table(n: int, k: int) -> int:
         return seen[key]
 
     return choose(n, k)
+
+
+def choose_hits(n: int, k: int) -> int:
+    calls = {"n": 0}
+
+    def choose(a: int, b: int) -> int:
+        calls["n"] += 1
+        if b == 0 or b == a:
+            return 1
+        return choose(a - 1, b - 1) + choose(a - 1, b)
+
+    choose = functools.cache(choose)
+    choose(n, k)
+    return calls["n"]

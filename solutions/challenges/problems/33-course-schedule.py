@@ -1,4 +1,3 @@
-
 def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:
     """True when the prerequisite graph has no cycle.
 

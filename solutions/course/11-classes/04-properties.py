@@ -1,4 +1,3 @@
-
 def freeze_water() -> int:
     return 32
 
@@ -26,5 +25,12 @@ class Room:
         return self.width * self.depth
 
 
-def floor_area(width: float, depth: float) -> float:
-    return Room(width, depth).area
+def room_area(width: float, depth: float) -> float:
+    room = Room(width, depth)
+    area = room.area
+    result = float(area)
+    return result
+
+
+def read_f(degrees: float) -> float:
+    return Celsius(degrees).fahrenheit

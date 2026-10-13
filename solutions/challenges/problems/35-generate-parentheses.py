@@ -1,4 +1,3 @@
-
 def generate_parenthesis(n: int) -> list[str]:
     """Every valid string of n pairs.
 

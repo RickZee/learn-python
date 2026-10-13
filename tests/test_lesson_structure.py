@@ -8,6 +8,9 @@ import re
 
 import pytest
 
+from tests._status import pending
+from tests._text import normalize
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PATTERNS = (
     "course/*/*-lesson.ipynb",
@@ -128,7 +131,7 @@ def test_lesson_has_the_depth_sections(path: pathlib.Path) -> None:
         "**Uses:** must be a link or 'nothing yet'"
     )
     whole = "\n".join(_text(cell) for cell in cells)
-    assert "not the practice problem" not in whole
+    assert normalize("not the practice problem") not in normalize(whole)
     for index, cell in enumerate(cells):
         if cell.get("cell_type") != "markdown" or not MISTAKE.search(_text(cell)):
             continue
@@ -158,10 +161,19 @@ def test_lesson_has_the_flow_sections(path: pathlib.Path) -> None:
     assert FIRST_WHY in first, "first cell needs **Why you'd use this:**"
     assert FIRST_GOALS in first, "first cell needs **After this lesson you can:**"
     for goal in _goal_chunks(first):
-        assert not goal.lower().startswith("predict"), (
+        assert not normalize(goal).startswith("predict"), (
             f'goal must not start with "predict": {goal}'
         )
+    assert not any(normalize(heading).startswith("predict") for heading in headings), (
+        "## Predict heading must not remain"
+    )
     assert not PREDICT_HEADING.search(whole), "## Predict heading must not remain"
+    if normalize("predict cell") in normalize(whole):
+        if rel in pending("G12"):
+            pytest.xfail("listed under G12 in docs/maintainers/status.md")
+        pytest.fail('learner markdown must not contain "predict cell"')
+    elif rel in pending("G12"):
+        pytest.fail(f"{rel} is listed under G12 but no longer contains predict cell; remove it")
 
     if rel.startswith("patterns/"):
         assert "Quick review" in headings, "pattern lesson needs ## Quick review"

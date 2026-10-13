@@ -1,4 +1,3 @@
-
 def has_cycle(head) -> bool:
     """True when a node points at an earlier node.
 

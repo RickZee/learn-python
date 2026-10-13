@@ -1,8 +1,5 @@
-
-
 def fewest_ones(amount: int) -> int:
     return amount
-
 
 
 def combinations(coins: list[int], amount: int) -> int:
@@ -20,6 +17,7 @@ def combinations(coins: list[int], amount: int) -> int:
         for total in range(coin, amount + 1):
             ways[total] += ways[total - coin]
     return ways[amount]
+
 
 def can_make(coins: list[int], amount: int) -> bool:
     possible = {0}

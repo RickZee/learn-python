@@ -10,7 +10,13 @@ Turn off inline autocomplete (Cursor Tab, Copilot) while you practice. Instructi
 
 You are doing a practice notebook, an exercise folder, or a challenge problem. The tutor gives a hint, not the solution.
 
-**Cursor.** Ask for help in the chat. The practice-tutor rule applies when you are working as a learner. You can also type `@practice-tutor`.
+**Cursor.** Run once from the repo root:
+
+```bash
+uv run python tools/learner_mode.py on
+```
+
+That writes a git-ignored `.cursorignore` (blocks `solutions/`) and an always-on learner rule. Undo with `uv run python tools/learner_mode.py off`. You can also type `@practice-tutor` in chat.
 
 **Claude Code.** In a terminal, inside the `learn-python` folder:
 
@@ -18,7 +24,7 @@ You are doing a practice notebook, an exercise folder, or a challenge problem. T
 claude --settings .claude/learner-settings.json
 ```
 
-That turns on the Python tutor output style. It also blocks edits to practice files and reads of `solutions/`.
+That turns on the Python tutor output style. It also blocks the Read tool on `solutions/` and edits to practice files. Shell commands are not blocked, so the tutor prompt is the second line of defense: do not ask the assistant to `cat` files under `solutions/`.
 
 **Claude app** (web, desktop, or mobile). Follow [the Claude project instructions](ai-prompts/claude-project-instructions.md). In each chat, choose the **Learning** style from the style menu.
 

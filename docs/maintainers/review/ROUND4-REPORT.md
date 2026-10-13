@@ -3,6 +3,7 @@
 ## What changed
 
 - Renamed `challenges/` → `challenges/` (and `solutions/challenges/` → `solutions/challenges/`), with learner docs, paths, and guides updated to **Challenges**. Kept materials flat at the repo root in learning order (course → internals → patterns → challenges → projects); did not nest under `materials/`.
+  - [Correction: the rename was `interview/` → `challenges/` (and `solutions/interview/` → `solutions/challenges/`); a later edit collapsed both sides of this bullet to `challenges/`.]
 - Substance guards: `tests/test_pattern_substance.py`, walkthrough template bans, generic `no-random` ban; status files that only shrink.
 - All 34 pattern lessons restored to the 9-part body with real Why/When/Common mistake; Worked reading padding removed.
 - All 68 challenge walkthroughs substantive; randomized oracles on problems that used the generic excuse.

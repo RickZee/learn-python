@@ -1,4 +1,3 @@
-
 def extra(n: int) -> int:
     return n + 1
 
@@ -23,5 +22,6 @@ def bumped() -> int:
 
 def two_steps() -> int:
     step = Step()
-    step.add(1)
-    return step.add(1)
+    first = step.add(1)
+    second = step.add(1)
+    return second

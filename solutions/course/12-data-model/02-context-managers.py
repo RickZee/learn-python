@@ -1,4 +1,3 @@
-
 def marker() -> str:
     return "close"
 
@@ -22,4 +21,15 @@ def visit() -> list[str]:
 def closed() -> str:
     with Door() as entered:
         entered.log.append("inside")
-    return entered.log[-1]
+    last = entered.log[-1]
+    text = str(last)
+    return text
+
+
+def run_door() -> str:
+    try:
+        with Door():
+            raise RuntimeError("boom")
+        return "swallowed"
+    except RuntimeError:
+        return "raised"

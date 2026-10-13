@@ -1,4 +1,3 @@
-
 def subset_count(nums: list[int]) -> int:
     return 2 ** len(nums)
 

@@ -1,4 +1,3 @@
-
 import functools
 
 
@@ -31,3 +30,17 @@ def in_dollars(func):
 
 def price_cents() -> int:
     return 250
+
+
+def double(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs) * 2
+
+    return wrapper
+
+
+def stamped(name: str) -> str:
+    decorated = shout(plain)
+    text = decorated(name)
+    result = str(text)
+    return result

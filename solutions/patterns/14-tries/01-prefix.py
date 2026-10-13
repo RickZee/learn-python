@@ -1,4 +1,3 @@
-
 class Book:
     """A trie of letters. search is true only for a whole inserted word.
 

@@ -104,9 +104,7 @@ def _rename_worked(cells: list[dict]) -> list[dict]:
     out: list[dict] = []
     for cell in cells:
         src = _text(cell)
-        if cell.get("cell_type") == "markdown" and src.lstrip().startswith(
-            "## Worked example"
-        ):
+        if cell.get("cell_type") == "markdown" and src.lstrip().startswith("## Worked example"):
             src = src.replace("## Worked example", "## See it work", 1)
             out.append(_set_source(cell, src))
         else:
@@ -123,9 +121,7 @@ def _merge_investigate_into_check(
     body = []
     for cell in investigate_cells:
         src = _text(cell)
-        if cell.get("cell_type") == "markdown" and src.lstrip().startswith(
-            "## Investigate"
-        ):
+        if cell.get("cell_type") == "markdown" and src.lstrip().startswith("## Investigate"):
             rest = re.sub(r"^##\s+Investigate\s*\n?", "", src.lstrip())
             if rest.strip():
                 body.append(_md(rest))
@@ -165,10 +161,7 @@ def convert_notebook(path: pathlib.Path, first: str, quick_review: str | None) -
         cells = nb["cells"]
         cells[0] = _set_source(cells[0], first)
         if quick_review is not None:
-            if not (
-                len(cells) > 1
-                and _text(cells[1]).lstrip().startswith("## Quick review")
-            ):
+            if not (len(cells) > 1 and _text(cells[1]).lstrip().startswith("## Quick review")):
                 cells.insert(1, _md(quick_review))
             else:
                 cells[1] = _set_source(cells[1], quick_review)

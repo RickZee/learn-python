@@ -1,4 +1,3 @@
-
 def daily_temperatures(temperatures: list[int]) -> list[int]:
     """Days until a warmer temperature, or 0.
 

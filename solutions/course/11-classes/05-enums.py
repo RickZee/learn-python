@@ -1,4 +1,3 @@
-
 from enum import Enum
 
 
@@ -12,8 +11,16 @@ def color_of(name: str) -> str:
 
 
 def color_value(name: str) -> str:
-    return Color(name).value
+    color = Color(name)
+    value = color.value
+    text = str(value)
+    return text
 
 
 def badge_name(value: str) -> str:
     return Color(value).name
+
+
+def paint(mode: str) -> str:
+    color = Color(mode)
+    return color.value
