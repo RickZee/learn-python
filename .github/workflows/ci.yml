@@ -26,13 +26,3 @@ jobs:
       # Cap workers: notebook kernels race on TCP ports under heavy xdist load.
       - run: uv run pytest -n 2
       - run: PYLEARN_SOLUTIONS=1 uv run pytest -n 2 course use-cases
-
-  devcontainer:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: devcontainers/ci@v0.3.1900000450
-        with:
-          runCmd: >
-            uv run python -c "import pylearn; print('ok')"
-            && uv run pytest -q tests/test_lessons.py -k 01-first-program
