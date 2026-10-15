@@ -18,6 +18,8 @@ For you if you have never coded, or only a little. Plan on about 4–6 hours a w
 - Challenge problems and pattern lessons until the course feels familiar
 - Deep concurrency and tooling until you have written a few Part 2 exercises
 
+Writing your own code? Keep the [Style guide](../reference/style-guide.md) and [Dos and don'ts](../reference/dos-and-donts.md) open, and see [Resources](../reference/resources.md) for outside reading.
+
 Use an AI tool as your tutor: see [Learning with an AI tutor](../guides/learning-with-ai.md).
 
 **Next:** [Install](../get-started/install.md)

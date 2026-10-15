@@ -20,6 +20,8 @@ For you if you already write another language. Plan on about 5–8 hours a week.
 - Long warm-ups on syntax you already know — still run the Check yourself cells
 - Repeating a Part 1 practice you can already pass cold
 
+Writing your own code? Keep the [Style guide](../reference/style-guide.md) and [Dos and don'ts](../reference/dos-and-donts.md) open, and see [Resources](../reference/resources.md) for outside reading.
+
 Use an AI tool as your tutor: see [Learning with an AI tutor](../guides/learning-with-ai.md).
 
 **Next:** [Course map](../reference/course-map.md)

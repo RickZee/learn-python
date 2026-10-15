@@ -21,7 +21,7 @@ Each link opens the first lesson. Contrast notes: [experienced path](../paths/ex
 | [07-iteration](../../course/07-iteration/01-comprehensions-lesson.ipynb) | List, dict, and set comprehensions, generators, `sorted` and `lambda` |
 | [08-collections-module](../../course/08-collections-module/01-counter-lesson.ipynb) | `Counter`, `defaultdict`, `deque`, `heapq`, itertools, `cache`, `bisect` |
 | [09-recursion](../../course/09-recursion/01-base-case-lesson.ipynb) | Base case, nested data, the call-stack limit, memoization |
-| [10-pitfalls](../../course/10-pitfalls/01-mutable-defaults-lesson.ipynb) | Shared defaults, shared rows, `is`, late binding, `Decimal` |
+| [10-pitfalls](../../course/10-pitfalls/01-mutable-defaults-lesson.ipynb) | Shared defaults, shared rows, `is`, late binding, `Decimal`, changing a list while you loop |
 | [11-classes](../../course/11-classes/01-classes-lesson.ipynb) | `class`, `__repr__`, `__eq__`, dataclasses, inheritance, properties, enums, a custom exception |
 | [12-data-model](../../course/12-data-model/01-dunder-lesson.ipynb) | dunders, `with`, `contextlib` |
 
@@ -34,7 +34,7 @@ Each link opens the first lesson. Contrast notes: [experienced path](../paths/ex
 | [15-testing](../../course/15-testing/00-pytest-lesson.ipynb) | pytest, tests, mocking |
 | [16-decorators](../../course/16-decorators/01-decorators-lesson.ipynb) | Wrappers, class decorators, cache, `partial` |
 | [17-concurrency](../../course/17-concurrency/01-threads-lesson.ipynb) | Threads, processes, async, races, TaskGroup |
-| [18-tooling](../../course/18-tooling/01-tooling-lesson.ipynb) | ruff, logging, Protocols, generics, TypedDict |
+| [18-tooling](../../course/18-tooling/01-tooling-lesson.ipynb) | ruff, logging, readable code, Protocols, generics, TypedDict |
 
 ## How Python works
 
@@ -83,6 +83,8 @@ Use beside [challenge practice](../guides/challenge-practice.md).
 | [21-matrix-traversal](../../patterns/21-matrix-traversal/01-rotate-lesson.ipynb) | Rotate / diagonals |
 | [22-bits](../../patterns/22-bits/01-xor-tricks-lesson.ipynb) | XOR / bit counts |
 | [15-design](../../patterns/15-design/01-tiny-set-lesson.ipynb) | A small set that drops the oldest key |
+
+Style and common mistakes: [Style guide](style-guide.md) · [Dos and don'ts](dos-and-donts.md) · [Resources](resources.md).
 
 Next: [challenge practice](../guides/challenge-practice.md).
 

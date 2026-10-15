@@ -38,6 +38,9 @@ Every learner and maintainer page in one place.
 | --- | --- |
 | [Course map](reference/course-map.md) | Every course, internals, and pattern unit |
 | [Glossary](reference/glossary.md) | Shared vocabulary |
+| [Style guide](reference/style-guide.md) | Naming, layout, and habits for your code |
+| [Dos and don'ts](reference/dos-and-donts.md) | Common mistakes and the lesson for each |
+| [Resources](reference/resources.md) | Official docs, PEPs, books, and tools |
 
 ## Teaching and maintainers
 

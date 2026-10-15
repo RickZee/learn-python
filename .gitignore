@@ -227,3 +227,31 @@ __marimo__/
 # Cursor learner mode (tools/learner_mode.py); never commit these
 .cursorignore
 .cursor/rules/learner-mode.mdc
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors (JetBrains, VS Code, vim, emacs)
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# Claude Code local overrides (shared files in .claude/ stay tracked)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Left behind if a lesson that writes a demo file is interrupted
+_ruff_demo*.py

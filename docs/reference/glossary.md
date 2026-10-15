@@ -53,3 +53,9 @@ Shared words used across this repo. American spelling.
 **pytest.** The test runner used for Part 2 exercises, projects, and this repo's checks.
 
 **PATH.** The list of folders your shell searches when you type a command name.
+
+**PEP.** A Python Enhancement Proposal: a numbered document that describes a Python feature or convention. PEP 8 is the style guide.
+
+**linter.** A tool that reads your code without running it and flags style problems and likely bugs. This repo uses `ruff`.
+
+**See also:** [Style guide](style-guide.md) · [Dos and don'ts](dos-and-donts.md) · [Resources](resources.md)

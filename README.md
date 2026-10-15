@@ -39,7 +39,7 @@ Open these in learning order. Setup lives under [docs/get-started/](docs/get-sta
 | Patterns | [patterns/](patterns/README.md) | Algorithm patterns on sibling problems |
 | Challenges | [challenges/](challenges/README.md) | Timed problems, codebase rounds, Python questions |
 | Projects | [use-cases/](use-cases/README.md) | Six builds plus short explore pages |
-| Docs | [docs/](docs/README.md) | Paths, AI tutor, troubleshooting |
+| Docs | [docs/](docs/README.md) | Paths, AI tutor, troubleshooting, style guide, dos and don'ts, resources |
 
 [solutions/](solutions/README.md) holds the answers — open one only after you've tried.
 
